@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "66470051-0aec-43ca-81b1-0936f16a72c2",
+		"name": "Zadanie 7.2.1 BD2 2023",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "4. POST JABŁUSZKA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nazwa\": \"JABŁKA\",\r\n    \"cena\": 1.0,\r\n    \"opis\":\"Bardzo smacznusie jabłuszka dla dobrego brzuszka.\",\r\n    \"ilosc\":\"666\",\r\n    \"jednostkaMiary\":\"KG\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. POST RYBY Z ODRY",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nazwa\": \"RYBY Z ODRY\",\r\n    \"cena\": 777.0,\r\n    \"opis\":\"Nieco zaspane, śnięte bym powiedział. Cena 500+\",\r\n    \"ilosc\":\"500\",\r\n    \"jednostkaMiary\":\"KG\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. GET BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/products/63b9bde95e5c9a46dcd4cacf",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"63b9bde95e5c9a46dcd4cacf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nazwa\": \"RYBY Z ODRY PRZED 2021\",\r\n    \"cena\": 0.99,\r\n    \"opis\":\"Smaczniusie rybki prosto z bajlandii, nie dotknięte covidem.\",\r\n    \"ilosc\":\"100000\",\r\n    \"jednostkaMiary\":\"KG\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/products/63b9bde95e5c9a46dcd4cacf",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"63b9bde95e5c9a46dcd4cacf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. DELETE RYBKI",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/products/63b9bde95e5c9a46dcd4cacf",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"63b9bde95e5c9a46dcd4cacf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. POST JABŁUSZKA Z REALIZACJA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nazwa\": \"JABŁUSZKA\",\r\n    \"cena\": 1.0,\r\n    \"opis\":\"Bardzo smacznusie jabłuszka dla dobrego brzuszka.\",\r\n    \"ilosc\":\"666\",\r\n    \"jednostkaMiary\":\"KG\",\r\n    \"czyWTrakcieRealizacji\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. DELETE JABLUSZKA Z REALIZACJA CZY MOZNA",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/products/63b9c4370b3e562f4cc8d01f",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"63b9c4370b3e562f4cc8d01f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

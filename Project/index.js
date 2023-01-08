@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const animes = require('./routes/animes');
+const products = require('./routes/products');
 const cors = require('cors')
 const corsOptions = {
   origin: '*',
@@ -9,8 +9,8 @@ const corsOptions = {
 app.use(cors(corsOptions));//cors(corsOptions)
 app.use(express.json());
 
-// „Podłączamy” obsługę „endpointów”, które zdefiniowaliśmy dla kolekcji 'animes' w katalogu routes/animes.js
-app.use('/animes', animes);
+// „Podłączamy” obsługę „endpointów”, które zdefiniowaliśmy dla kolekcji 'products' w katalogu routes/products.js
+app.use('/products', products);
 
 require('dotenv').config();
 const dbConnData = {
