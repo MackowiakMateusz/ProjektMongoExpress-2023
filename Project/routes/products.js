@@ -28,8 +28,68 @@ router.post('/', async (req, res) => {
     jednostkaMiary:{type:String,require:true}\n');
   }
 });
-router.get('/:id', async (req, res) => {
+router.get('/id/:id', async (req, res) => {
   let product = await Product.findById(req.params.id)
+  try {
+    if(product==null)
+    {
+      res.send("No item with such id in database.")
+    }
+    res.send(product)
+  } catch (error) {
+    res.status(500).send("Error: "+error);
+  }
+});
+router.get('/nazwa/:name', async (req, res) => {
+  let product = await Product.find({nazwa:req.params.name})
+  try {
+    if(product==null)
+    {
+      res.send("No item with such id in database.")
+    }
+    res.send(product)
+  } catch (error) {
+    res.status(500).send("Error: "+error);
+  }
+});
+router.get('/cena/:price', async (req, res) => {
+  let product = await Product.find({cena:req.params.price})
+  try {
+    if(product==null)
+    {
+      res.send("No item with such id in database.")
+    }
+    res.send(product)
+  } catch (error) {
+    res.status(500).send("Error: "+error);
+  }
+});
+router.get('/ilosc/:quantity', async (req, res) => {
+  let product = await Product.find({ilosc:req.params.quantity})
+  try {
+    if(product==null)
+    {
+      res.send("No item with such id in database.")
+    }
+    res.send(product)
+  } catch (error) {
+    res.status(500).send("Error: "+error);
+  }
+});
+router.get('/jednostkaMiary/:measureUnit', async (req, res) => {
+  let product = await Product.find({jednostkaMiary:req.params.measureUnit})
+  try {
+    if(product==null)
+    {
+      res.send("No item with such id in database.")
+    }
+    res.send(product)
+  } catch (error) {
+    res.status(500).send("Error: "+error);
+  }
+});
+router.get('/czyWTrakcieRealizacji/:inShippingProgress', async (req, res) => {
+  let product = await Product.find({czyWTrakcieRealizacji:req.params.inShippingProgress})
   try {
     if(product==null)
     {
