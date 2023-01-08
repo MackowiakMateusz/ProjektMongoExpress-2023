@@ -100,6 +100,19 @@ router.get('/czyWTrakcieRealizacji/:inShippingProgress', async (req, res) => {
     res.status(500).send("Error: "+error);
   }
 });
+router.get('/raport', async (req, res) => {
+  const products = await Product.find({});
+  const arrayIlosciProduktow=products.map((e)=>{return {"Nazwa":e.nazwa, "Ilosc":e.ilosc}})
+  const returnedObject={
+    ilosciProduktow: arrayIlosciProduktow,
+    lacznaWartosc: products.map(e=>e.cena*e.ilosc).reduce((accumulator, currentValue) => accumulator + currentValue,0)
+  }
+  try {
+    res.send(returnedObject);
+  } catch (error) {
+    res.status(500).send("Error: "+error);
+  }
+});
 router.put('/:id', async (req, res) => {
   try {
     let deletedProduct = await Product.findById(req.params.id);

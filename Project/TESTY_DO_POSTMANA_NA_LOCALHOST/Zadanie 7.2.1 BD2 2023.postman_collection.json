@@ -83,13 +83,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/products/63b9bde95e5c9a46dcd4cacf",
+					"raw": "localhost:5000/products/id/63b9bde95e5c9a46dcd4cacf",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
 						"products",
+						"id",
 						"63b9bde95e5c9a46dcd4cacf"
 					]
 				}
@@ -97,29 +98,112 @@
 			"response": []
 		},
 		{
-			"name": "5. PUT",
+			"name": "3. GET BY NAZWA",
 			"request": {
-				"method": "PUT",
+				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"nazwa\": \"RYBY Z ODRY PRZED 2021\",\r\n    \"cena\": 0.99,\r\n    \"opis\":\"Smaczniusie rybki prosto z bajlandii, nie dotknięte covidem.\",\r\n    \"ilosc\":\"100000\",\r\n    \"jednostkaMiary\":\"KG\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "localhost:5000/products/63b9bde95e5c9a46dcd4cacf",
+					"raw": "localhost:5000/products/nazwa/JABŁKA",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
 						"products",
-						"63b9bde95e5c9a46dcd4cacf"
+						"nazwa",
+						"JABŁKA"
 					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. GET BY CENA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/products/cena/0.99",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"cena",
+						"0.99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. GET BY ILOSC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/products/ilosc/500",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"ilosc",
+						"500"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. GET BY JEDNOSTKA MIARY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/products/jednostkaMiary/KG",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"jednostkaMiary",
+						"KG"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. GET BY CZY W TRAKCIE REALIZACJI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/products/czyWTrakcieRealizacji/true",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"czyWTrakcieRealizacji",
+						"true"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET RAPORT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
 				}
 			},
 			"response": []
@@ -176,32 +260,61 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/products/63b9c4370b3e562f4cc8d01f",
+					"raw": "localhost:5000/products/63b9c4c80b3e562f4cc8d02d",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
 						"products",
-						"63b9c4370b3e562f4cc8d01f"
+						"63b9c4c80b3e562f4cc8d02d"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "3. GET ALL",
+			"name": "5. PUT",
 			"request": {
-				"method": "GET",
+				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nazwa\": \"RYBY Z ODRY PRZED 2021\",\r\n    \"cena\": 0.99,\r\n    \"opis\":\"Smaczniusie rybki prosto z bajlandii, nie dotknięte covidem.\",\r\n    \"ilosc\":\"100000\",\r\n    \"jednostkaMiary\":\"KG\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "localhost:5000/products",
+					"raw": "localhost:5000/products/63b9bde95e5c9a46dcd4cacf",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"products"
+						"products",
+						"63b9bde95e5c9a46dcd4cacf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. DELETE JABLUSZKA JUZ BEZ REALIZACJI",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/products/63b9c4c80b3e562f4cc8d02d",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"63b9c4c80b3e562f4cc8d02d"
 					]
 				}
 			},
